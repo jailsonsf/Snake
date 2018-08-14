@@ -131,7 +131,7 @@ while continua:
 
             ma_x = randrange(0, largura - tamanho, 10)
             ma_y = randrange(0, altura - tamanho, 10)
-            tam_cobra += 15
+            tam_cobra += 1
 
         fruit(ma_x, ma_y)
         pos_x += velocidade_x
