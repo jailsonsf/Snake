@@ -15,7 +15,7 @@ Simple snake game made in python using the pygame library
   pip install pipenv
   ```
 
-1. Install depedencies in __Pipfile__:
+2. Install depedencies in __Pipfile__:
 
   ```
   make pipfile
