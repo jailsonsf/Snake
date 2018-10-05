@@ -1,5 +1,5 @@
 import pygame
-from game_functions import text, snake, fruit
+from game_functions import text_e, text_p , snake, fruit
 from random import randrange
 
 pygame.init()
@@ -27,6 +27,7 @@ velocidade_x = 0
 velocidade_y = 0
 cobra_xy = []
 tam_cobra = 1
+placar = 0
 
 game_over = False
 continua = True
@@ -34,7 +35,8 @@ continua = True
 while continua:
     while game_over:
         fundo.fill(preto)
-        text('Game over, tecle E para sair ou C para continuar', branco)
+        text_e('Game over, tecle E para sair ou C para continuar', branco)
+        text_p('Pontuação: {}'.format(placar), branco)
         pygame.display.update()
 
         for eventos in pygame.event.get():
@@ -57,6 +59,7 @@ while continua:
                     velocidade_y = 0
                     cobra_xy = []
                     tam_cobra = 1
+                    placar = 0
 
                     game_over = False
                     continua = True
@@ -79,6 +82,7 @@ while continua:
             ma_x = randrange(0, largura - tamanho, 10)
             ma_y = randrange(0, altura - tamanho, 10)
             tam_cobra += 1
+            placar += 1
 
         fruit(ma_x, ma_y)
         pos_x += velocidade_x
