@@ -29,7 +29,7 @@ def text_p(msg, cor):
 def snake(cobra_xy):
 
     for xy in cobra_xy:
-        pygame.draw.rect(fundo, branco, [xy[0], xy[1], tamanho, tamanho])
+        pygame.draw.rect(fundo, verde, [xy[0], xy[1], tamanho, tamanho])
 
 def fruit(pos_x, pos_y):
 

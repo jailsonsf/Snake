@@ -33,7 +33,7 @@ game_over = False
 continua = True
 
 while continua:
-    
+
     while game_over:
 
         fundo.fill(preto)
@@ -101,21 +101,33 @@ while continua:
         pygame.display.update()
         relogio.tick(7)
 
-        if pos_x >= largura:
+        # if pos_x >= largura:
+        #     pos_x = 0
+        #
+        # if pos_x < 0:
+        #     pos_x = largura - tamanho
+        #
+        # if pos_y >= altura:
+        #     pos_y = 0
+        #
+        # if pos_y < 0:
+        #     pos_y = altura - tamanho
 
-            pos_x = 0
+        if pos_x > largura:
+
+            game_over = True
 
         if pos_x < 0:
 
-            pos_x = largura - tamanho
+            game_over = True
 
-        if pos_y >= altura:
+        if pos_y > altura:
 
-            pos_y = 0
+            game_over = True
 
         if pos_y < 0:
 
-            pos_y = altura - tamanho
+            game_over = True
 
     for eventos in pygame.event.get():
 
